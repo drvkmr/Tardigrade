@@ -92,6 +92,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Initialize Masonry
+    const grid = document.querySelector('.gallery-grid');
+    if (grid) {
+        imagesLoaded(grid, function() {
+            new Masonry(grid, {
+                itemSelector: '.gallery-item',
+                columnWidth: '.gallery-item',
+                percentPosition: true
+            });
+        });
+    }
+
+    // Initialize Inline Renovation Carousel
+    const lgContainer = document.getElementById('inline-gallery-container');
+    if (lgContainer) {
+        const inlineGallery = lightGallery(lgContainer, {
+            container: lgContainer,
+            dynamic: true,
+            hash: false,
+            closable: false,
+            showMaximizeIcon: true,
+            appendSubHtmlTo: '.lg-item',
+            slideDelay: 400,
+            dynamicEl: [
+                { src: 'Gallery/progression1.PNG', thumb: 'Gallery/progression1.PNG', subHtml: '<h4>Stage 1: The Empty Shell</h4><p>The boat as it was when the project began - a completely blank canvas.</p>' },
+                { src: 'Gallery/progression2.jpg', thumb: 'Gallery/progression2.jpg', subHtml: '<h4>Stage 2: Framing and Insulation</h4><p>The internal structure starts to take shape with wooden framing and spray foam insulation.</p>' },
+                { src: 'Gallery/progression3.jpg', thumb: 'Gallery/progression3.jpg', subHtml: '<h4>Stage 3: Wiring and Cladding</h4><p>Electrical wiring is run throughout, and the beautiful wood cladding is installed.</p>' },
+                { src: 'Gallery/progression4.jpg', thumb: 'Gallery/progression4.jpg', subHtml: '<h4>Stage 4: Kitchen and Cabinetry</h4><p>Custom cabinetry and the kitchen units are built and fitted.</p>' },
+                { src: 'Gallery/progression5.jpg', thumb: 'Gallery/progression5.jpg', subHtml: '<h4>Stage 5: Final Touches</h4><p>The interior is painted, and final details like lighting and flooring are added.</p>' },
+                { src: 'Gallery/after1.jpg',     thumb: 'Gallery/after1.jpg',     subHtml: '<h4>The Finished Product</h4><p>The beautiful, modern, and cozy interior is complete and ready to be enjoyed.</p>' }
+            ],
+            plugins: [lgZoom, lgThumbnail, lgFullscreen],
+        });
+        
+        inlineGallery.openGallery();
+    }
+
     // Smooth scrolling for navigation links
     const links = document.querySelectorAll('a[href^="#"]');
     
