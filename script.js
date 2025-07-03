@@ -129,6 +129,49 @@ document.addEventListener('DOMContentLoaded', function() {
         inlineGallery.openGallery();
     }
 
+    // Initialize Window View Carousel
+    const windowContainer = document.getElementById('window-gallery-container');
+    if (windowContainer) {
+        const windowGallery = lightGallery(windowContainer, {
+            container: windowContainer,
+            dynamic: true,
+            hash: false,
+            closable: false,
+            showMaximizeIcon: true,
+            appendSubHtmlTo: '.lg-item',
+            slideDelay: 400,
+            dynamicEl: [
+                { src: 'Gallery/window/1.jpg', thumb: 'Gallery/window/1.jpg' },
+                { src: 'Gallery/window/2.jpg', thumb: 'Gallery/window/2.jpg' },
+                { src: 'Gallery/window/3.jpg', thumb: 'Gallery/window/3.jpg' },
+                { src: 'Gallery/window/4.jpg', thumb: 'Gallery/window/4.jpg' },
+                { src: 'Gallery/window/5.jpg', thumb: 'Gallery/window/5.jpg' },
+                { src: 'Gallery/window/6.jpg', thumb: 'Gallery/window/6.jpg' },
+                { src: 'Gallery/window/7.jpg', thumb: 'Gallery/window/7.jpg' },
+                { src: 'Gallery/window/8.jpg', thumb: 'Gallery/window/8.jpg' },
+                { src: 'Gallery/window/9.jpg', thumb: 'Gallery/window/9.jpg' },
+                { src: 'Gallery/window/10.jpg', thumb: 'Gallery/window/10.jpg' },
+                { src: 'Gallery/window/11.jpg', thumb: 'Gallery/window/11.jpg' },
+                { src: 'Gallery/window/12.jpg', thumb: 'Gallery/window/12.jpg' },
+                { src: 'Gallery/window/13.jpg', thumb: 'Gallery/window/13.jpg' },
+                { src: 'Gallery/window/14.jpg', thumb: 'Gallery/window/14.jpg' },
+                { src: 'Gallery/window/15.jpg', thumb: 'Gallery/window/15.jpg' },
+                { src: 'Gallery/window/16.jpg', thumb: 'Gallery/window/16.jpg' },
+                { src: 'Gallery/window/17.jpg', thumb: 'Gallery/window/17.jpg' },
+                { src: 'Gallery/window/18.jpg', thumb: 'Gallery/window/18.jpg' },
+                { src: 'Gallery/window/19.jpg', thumb: 'Gallery/window/19.jpg' },
+                { src: 'Gallery/window/20.jpg', thumb: 'Gallery/window/20.jpg' },
+                { src: 'Gallery/window/21.jpg', thumb: 'Gallery/window/21.jpg' },
+                { src: 'Gallery/window/22.jpg', thumb: 'Gallery/window/22.jpg' },
+                { src: 'Gallery/window/23.jpg', thumb: 'Gallery/window/23.jpg' },
+                { src: 'Gallery/window/24.jpg', thumb: 'Gallery/window/24.jpg' }
+            ],
+            plugins: [lgZoom, lgThumbnail, lgFullscreen],
+        });
+        
+        windowGallery.openGallery();
+    }
+
     // Smooth scrolling for navigation links
     const links = document.querySelectorAll('a[href^="#"]');
     
