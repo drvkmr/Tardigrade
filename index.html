@@ -18,6 +18,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lg-share.css">
 </head>
 <body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">Tardigrade</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="specifications.html">Specifications</a></li>
+                    <li><a href="smart-systems.html">Smart Systems</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -42,8 +60,9 @@
     <section class="gallery-section">
         <div class="container">
             <h2>Boat Gallery</h2>
-            <p class="section-subtitle">Click any image to view in full size</p>
+            <p class="section-subtitle">A glimpse of life on the water. <a href="gallery.html" class="link-arrow">View the full gallery &rarr;</a></p>
             <div id="main-gallery" class="gallery-grid">
+                <!-- A smaller, curated selection of images -->
                 <div class="gallery-item" data-src="Gallery/outside_landscape1.jpg" data-lg-size="4608-3456">
                     <img src="Gallery/outside_landscape1.jpg" alt="Exterior view - canal side">
                     <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
@@ -68,66 +87,6 @@
                     <img src="Gallery/outside_landscape2.jpg" alt="Exterior canal view">
                     <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
                 </div>
-                <div class="gallery-item" data-src="Gallery/inside_landscape2.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/inside_landscape2.jpg" alt="Interior kitchen area">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_landscape3.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/inside_landscape3.jpg" alt="Interior kitchen area">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/outside_portrait2.jpg" data-lg-size="3456-4608">
-                    <img src="Gallery/outside_portrait2.jpg" alt="Exterior portrait view">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_portrait3.jpg" data-lg-size="3456-4608">
-                    <img src="Gallery/inside_portrait3.jpg" alt="Interior detail view">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_landscape4.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/inside_landscape4.jpg" alt="Interior living area">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/outside_landscape3.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/outside_landscape3.jpg" alt="Exterior view">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_landscape5.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/inside_landscape5.jpg" alt="Interior monitoring setup">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/outside_portrait3.jpg" data-lg-size="3456-4608">
-                    <img src="Gallery/outside_portrait3.jpg" alt="Exterior detail view">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_landscape6.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/inside_landscape6.jpg" alt="Interior bedroom area">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_portrait4.jpg" data-lg-size="3456-4608">
-                    <img src="Gallery/inside_portrait4.jpg" alt="Interior detail">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/outside_landscape4.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/outside_landscape4.jpg" alt="Exterior moored view">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_landscape7.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/inside_landscape7.jpg" alt="Interior full view">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_portrait5.jpg" data-lg-size="3456-4608">
-                    <img src="Gallery/inside_portrait5.jpg" alt="Interior display system">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/inside_landscape8.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/inside_landscape8.jpg" alt="Interior living area">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
-                <div class="gallery-item" data-src="Gallery/outside_portrait4.jpg" data-lg-size="3456-4608">
-                    <img src="Gallery/outside_portrait4.jpg" alt="Exterior detail view">
-                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-                </div>
             </div>
         </div>
     </section>
@@ -137,29 +96,15 @@
         <div class="container">
             <div class="specs-content">
                 <div class="specs-text">
-                    <h2>Technical Specifications</h2>
-                    <div class="spec-grid">
-                        <div class="spec-item">
-                            <i class="fas fa-solar-panel"></i>
-                            <h3>Solar Power System</h3>
-                            <p>2x 515W solar panels with Victron 12V 50A MPPT controller and 800W Victron Multiplus inverter/charger</p>
-                        </div>
-                        <div class="spec-item">
-                            <i class="fas fa-bolt"></i>
-                            <h3>Electrical System</h3>
-                            <p>Victron smart alternator charger, high-power USB ports throughout, 220V 3-pin sockets everywhere, onboard GPS</p>
-                        </div>
-                        <div class="spec-item">
-                            <i class="fas fa-fire"></i>
-                            <h3>Engine & Hull</h3>
-                            <p>Perkins 4108 engine (never failed, serviced Dec 2023), hull professionally blackened Dec 2023</p>
-                        </div>
-                        <div class="spec-item">
-                            <i class="fas fa-tint"></i>
-                            <h3>Water Systems</h3>
-                            <p>850L main tank, 80L drinking tank, 3-stage purifier, Paloma gas boiler, flow meter monitoring</p>
-                        </div>
+                    <h2>Modern & Reliable</h2>
+                    <p class="section-subtitle" style="text-align: left; color: #eee; margin-bottom: 30px;">Built with the best systems for comfort and peace of mind.</p>
+                    <div class="spec-grid-home">
+                        <div class="spec-item-home"><i class="fas fa-solar-panel"></i> 1030W Solar Power</div>
+                        <div class="spec-item-home"><i class="fas fa-fire"></i> Perkins 4108 Engine</div>
+                        <div class="spec-item-home"><i class="fas fa-wifi"></i> 5G Connected</div>
+                        <div class="spec-item-home"><i class="fas fa-tint"></i> 3-Stage Water Purifier</div>
                     </div>
+                    <a href="specifications.html" class="cta-button" style="margin-top: 30px;">View Full Specifications</a>
                 </div>
                 <div class="specs-image">
                     <img src="Gallery/inside_landscape2.jpg" alt="Interior showing technical systems">
@@ -167,111 +112,19 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Renovation Journey -->
     <section class="renovation-section">
         <div class="container">
-            <h2>Complete Renovation Journey</h2>
-            <p class="section-subtitle">From empty shell to luxury floating home - see the transformation</p>
-            
-            <!-- Before/After Comparison -->
-            <div class="renovation-grid">
-                <div class="renovation-item">
-                    <h3>Before Renovation</h3>
-                    <div class="before-after-container">
-                        <img src="Gallery/before1.PNG" alt="Before renovation - interior 1">
-                    </div>
+            <div class="renovation-layout">
+                <div class="renovation-text">
+                    <h2>A Step-by-Step Look at the Transformation</h2>
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 20px;">From an empty shell to a floating home, see how it happened.</p>
+                    <p>The entire process was a labor of love, focused on quality craftsmanship and smart design. Every detail, from the insulation to the custom cabinetry, was meticulously planned and executed to create a comfortable and modern living space.</p>
+                    <a href="gallery.html" class="link-arrow">See more construction photos &rarr;</a>
                 </div>
-                <div class="renovation-item">
-                    <h3>After Renovation</h3>
-                    <div class="before-after-container">
-                        <img src="Gallery/after1.jpg" alt="After renovation - interior 1">
-                    </div>
-                </div>
-                <div class="renovation-item">
-                    <h3>Before Renovation</h3>
-                    <div class="before-after-container">
-                        <img src="Gallery/before2.PNG" alt="Before renovation - interior 2">
-                    </div>
-                </div>
-                <div class="renovation-item">
-                    <h3>After Renovation</h3>
-                    <div class="before-after-container">
-                        <img src="Gallery/after2.jpg" alt="After renovation - interior 2">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Progress Timeline -->
-            <div class="progress-timeline">
-                <h3>A Step-by-Step Look at the Transformation</h3>
-                <p class="section-subtitle" style="margin-bottom: 40px;">From an empty shell to a floating home, see how it happened.</p>
-                <div id="inline-gallery-container" class="inline-gallery-container"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Construction Gallery -->
-    <section class="construction-section">
-        <div class="container">
-            <h2>Construction & Craftsmanship</h2>
-            <p class="section-subtitle">Detailed construction work and attention to detail</p>
-            <div id="construction-gallery" class="construction-grid">
-                <div class="construction-item" data-src="Gallery/construction1.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/construction1.jpg" alt="Construction detail 1">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
-                    </div>
-                </div>
-                <div class="construction-item" data-src="Gallery/construction2.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/construction2.jpg" alt="Construction detail 2">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
-                    </div>
-                </div>
-                <div class="construction-item" data-src="Gallery/construction3.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/construction3.jpg" alt="Construction detail 3">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
-                    </div>
-                </div>
-                <div class="construction-item" data-src="Gallery/construction4.jpg" data-lg-size="4608-3456">
-                    <img src="Gallery/construction4.jpg" alt="Construction detail 4">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Smart Features -->
-    <section class="smart-features">
-        <div class="container">
-            <h2>Smart Features & Technology</h2>
-            <div class="features-grid">
-                <div class="feature-demo">
-                    <h3>Smart Lighting System</h3>
-                    <div class="demo-container">
-                        <img src="Gallery/inside_portrait3.jpg" alt="Smart lighting system">
-                    </div>
-                    <p>Unique dimmable lighting setup with smart switches throughout the boat</p>
-                </div>
-                
-                <div class="feature-demo">
-                    <h3>LiveGrid Smart Display</h3>
-                    <div class="demo-container">
-                        <img src="Gallery/inside_portrait5.jpg" alt="LiveGrid smart display showing system info">
-                    </div>
-                    <p>Beautiful display showing all boat systems - solar, battery, water levels, and more</p>
-                </div>
-                
-                <div class="feature-demo">
-                    <h3>Remote Monitoring</h3>
-                    <div class="demo-container">
-                        <img src="Gallery/inside_landscape5.jpg" alt="Remote monitoring setup">
-                    </div>
-                    <p>Raspberry Pi system with 5G router for online monitoring and excellent connectivity</p>
+                <div class="renovation-carousel-wrapper">
+                    <div id="inline-gallery-container" class="inline-gallery-container"></div>
                 </div>
             </div>
         </div>
@@ -285,54 +138,7 @@
             <div id="window-gallery-container" class="inline-gallery-container"></div>
         </div>
     </section>
-
-    <!-- Pricing & Contact -->
-    <section class="pricing-contact" id="contact">
-        <div class="container">
-            <div class="pricing-content">
-                <div class="pricing-card">
-                    <h2>Asking Price</h2>
-                    <div class="price">£XX,XXX</div>
-                    <p class="price-note">Price negotiable for serious buyers</p>
-                    <ul class="included-list">
-                        <li>✓ Perkins 4108 engine (serviced Dec 2023)</li>
-                        <li>✓ Hull blackened professionally (Dec 2023)</li>
-                        <li>✓ Complete solar & electrical systems</li>
-                        <li>✓ All smart monitoring included</li>
-                        <li>✓ 5G connectivity setup</li>
-                        <li>✓ Survey from 2021 (excellent report)</li>
-                        <li>✓ Mooring can be discussed</li>
-                    </ul>
-                </div>
-                
-                <div class="contact-card">
-                    <h2>Get In Touch</h2>
-                    <p>Interested in viewing this beautiful narrowboat? We'd love to hear from you!</p>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:your.email@example.com">your.email@example.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+447XXXXXXXXX">+44 7XXX XXX XXX</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Currently moored in London</span>
-                        </div>
-                    </div>
-                    
-                    <button class="contact-button" onclick="window.location.href='mailto:your.email@example.com'">
-                        <i class="fas fa-envelope"></i>
-                        Send Email
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">

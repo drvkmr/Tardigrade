@@ -1,5 +1,17 @@
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Sticky header shadow on scroll
+    const header = document.querySelector('.main-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+
     // Initialize lightGallery for main gallery
     const mainGallery = document.getElementById('main-gallery');
     if (mainGallery) {
@@ -342,6 +354,32 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.boxShadow = '';
         });
     });
+
+    // Mobile nav toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    if (mobileNavToggle && mainNav) {
+        mobileNavToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('mobile-open');
+            mobileNavToggle.classList.toggle('is-active');
+            const isOpen = mainNav.classList.contains('mobile-open');
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+            document.documentElement.style.overflow = isOpen ? 'hidden' : '';
+        });
+
+        // Close mobile nav when a link is clicked
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('mobile-open')) {
+                    mainNav.classList.remove('mobile-open');
+                    mobileNavToggle.classList.remove('is-active');
+                    document.body.style.overflow = '';
+                    document.documentElement.style.overflow = '';
+                }
+            });
+        });
+    }
 });
 
 // Initialize body with opacity 0 for fade-in effect
